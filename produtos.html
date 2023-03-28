@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatimain_produtoEspecifico" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- -----boostrap------ -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <!-- ----fim---- -->
+
+  <!-- sweetalert -->
+  <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+  <!-- fim -->
+  <script src="https://kit.fontawesome.com/41c67a60df.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <title>Produtos POPSHOP</title>
+</head>
+
+<body onload="valor()">
+  <header class="container-fluid">
+    <div class="row">
+      <div class="col-sm-8 col-md-3 col-lg-2 logo_header">
+        <img src="imagens/funko_logo.webp" class="imagem_header" alt="" />
+      </div>
+
+      <div class="col-md-6 col-lg-8 div_pesquisa">
+        <div id="div_busca">
+          <input type="text" id="texto_busca" placeholder="Buscar...">
+          <a href=""><img src="imagens/pesquisa.png" id="btnBusca" alt="Buscar"></a>
+        </div>
+      </div>
+
+      <div class="col-sm-4 col-md-3 col-lg-2 links_header">
+        <a href="index.html">HOME</a>
+        <a href="produtos.html">PRODUTOS</a>
+        <a href="login.html">LOGIN</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container-fluid main_produtos">
+    <!-- //----------------- banner -------------------- -->
+    <div class="banner row">
+      <div class="col-md-12 col-lg-6 col-sm-12">
+        <h1 class="h1_banner_produtos">DRAGON BALL FUNKO</h1>
+        <button class="btn_banner_produtos"><a href="">GARANTIR O MEU!</a></button>
+      </div>
+      <div class="col-md-12 col-lg-6 col-sm-12">
+        <div class="div_funko_banner">
+          <a href=""><img src="imagens/goku_funko.png" class="funko_banner_produtos" alt=""></a>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- //------------------- PRODUTOS -------------------- -->
+    <div class="container-fluid">
+      <div class="row linhas_produto">
+        <div class="col-md-3 div_prod">
+          <div class="borda_unica">
+            <div class="row linha_icons_prod">
+              <button class="btn_icon_produto"><img src="imagens/carrinho_de_compras.png" class="icons_prod" alt=""
+                  onclick="alerta_produtoNoCarrinho()"></button>
+              <button class="btn_icon_produto trocar_imagem"><img src="imagens/favorito.png"
+                  class="icons_prod img_favoritar" alt=""></button>
+            </div>
+            <div class="container_img">
+              <a href="pagina_produto.html"><img class="img_produto" src="imagens/funkos/nickFury_funko.png"
+                  alt="Primeira imagem"></a>
+              <a href="pagina_produto.html"><img class="img_produtoHover" src="imagens/funkos/nickFury_caixinha.png"
+                  alt="Primeira imagem"></a>
+            </div>
+            <div class="descricao_prod">
+              <p>MARVEL</p>
+              <p><strong>POP! - NICK FURY</strong></p>
+              <div class="conversao_produtos" style="display: inline-flex;">
+                <p class="valor_real_produtos"></p>
+                <small class="valor_dolar_produtos">U$10.99</small>
+              </div>
+            </div>
+
+            <div class="div_btnCompra">
+              <a href="pagina_produto.html" class="btn_verMais"><button>Saber Mais <img class="seta_btnProduto"
+                    src="imagens/seta_direita.png" alt=""></button></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 div_prod">
+          <div class="borda_unica">
+            <div class="row linha_icons_prod">
+              <button class="btn_icon_produto"><img src="imagens/carrinho_de_compras.png" class="icons_prod" alt=""
+                  onclick="alerta_produtoNoCarrinho()"></button>
+              <button class="btn_icon_produto trocar_imagem"><img src="imagens/favorito.png"
+                  class="icons_prod img_favoritar" alt=""></button>
+            </div>
+            <div class="container_img">
+              <a href="pagina_produto.html"><img class="img_produto" src="imagens/funkos/homemAranha_funko.png"
+                  alt="Primeira imagem"></a>
+              <a href="pagina_produto.html"><img class="img_produtoHover" src="imagens/funkos/homemAranha_caixinha.png"
+                  alt="Primeira imagem"></a>
+            </div>
+            <div class="descricao_prod">
+              <p>MARVEL</p>
+              <p><strong>POP! - HOMEM ARANHA</strong></p>
+              <div class="conversao_produtos" style="display: inline-flex;">
+                <p class="valor_real_produtos"></p>
+                <small class="valor_dolar_produtos">U$15.95</small>
+              </div>
+            </div>
+
+            <div class="div_btnCompra">
+              <a href="pagina_produto.html" class="btn_verMais"><button>Saber Mais <img class="seta_btnProduto"
+                    src="imagens/seta_direita.png" alt=""></button></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 div_prod">
+          <div class="borda_unica">
+            <div class="row linha_icons_prod">
+              <button class="btn_icon_produto"><img src="imagens/carrinho_de_compras.png" class="icons_prod" alt=""
+                  onclick="alerta_produtoNoCarrinho()"></button>
+              <button class="btn_icon_produto trocar_imagem"><img src="imagens/favorito.png"
+                  class="icons_prod img_favoritar" alt=""></button>
+            </div>
+            <div class="container_img">
+              <a href="pagina_produto.html"><img class="img_produto" src="imagens/hermione_granger_funko.webp"
+                  alt="Primeira imagem"></a>
+              <a href="pagina_produto.html"><img class="img_produtoHover" src="imagens/hermione_caixinha.jpg"
+                  alt="Primeira imagem"></a>
+            </div>
+            <div class="descricao_prod">
+              <p>HARRY POTTER</p>
+              <p><strong>POP! - HERMIONE GRANGER</strong></p>
+              <div class="conversao_produtos" style="display: inline-flex;">
+                <p class="valor_real_produtos"></p>
+                <small class="valor_dolar_produtos">U$21.70</small>
+              </div>
+            </div>
+
+            <div class="div_btnCompra">
+              <a href="pagina_produto.html" class="btn_verMais"><button>Saber Mais <img class="seta_btnProduto"
+                    src="imagens/seta_direita.png" alt=""></button></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 div_prod">
+          <div class="borda_unica">
+            <div class="row linha_icons_prod">
+              <button class="btn_icon_produto"><img src="imagens/carrinho_de_compras.png" class="icons_prod" alt=""
+                  onclick="alerta_produtoNoCarrinho()"></button>
+              <button class="btn_icon_produto trocar_imagem"><img src="imagens/favorito.png"
+                  class="icons_prod img_favoritar" alt=""></button>
+            </div>
+            <div class="container_img">
+              <a href="pagina_produto.html"><img class="img_produto" src="imagens/ron_harrypotter.png"
+                  alt="Primeira imagem"></a>
+              <a href="pagina_produto.html"><img class="img_produtoHover" src="imagens/ron_hp_caixinha.webp"
+                  alt="Primeira imagem"></a>
+            </div>
+            <div class="descricao_prod">
+              <p>HARRY POTTER</p>
+              <p><strong>POP! - RON COM RATO</strong></p>
+              <div class="conversao_produtos" style="display: inline-flex;">
+                <p class="valor_real_produtos"></p>
+                <small class="valor_dolar_produtos">U$25.0</small>
+              </div>
+            </div>
+
+            <div class="div_btnCompra">
+              <a href="pagina_produto.html" class="btn_verMais"><button>Saber Mais <img class="seta_btnProduto"
+                    src="imagens/seta_direita.png" alt=""></button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row linhas_produto ">
+        <div class="col-md-3 div_prod">
+          <div class="borda_unica">
+            <div class="row linha_icons_prod">
+              <button class="btn_icon_produto"><img src="imagens/carrinho_de_compras.png" class="icons_prod" alt=""
+                  onclick="alerta_produtoNoCarrinho()"></button>
+              <button class="btn_icon_produto trocar_imagem"><img src="imagens/favorito.png"
+                  class="icons_prod img_favoritar" alt=""></button>
+            </div>
+            <div class="container_img">
+              <a href="pagina_produto.html"><img class="img_produto" src="imagens/funkos/flash_funko.png"
+                  alt="Primeira imagem"></a>
+              <a href="pagina_produto.html"><img class="img_produtoHover" src="imagens/funkos/flash_caixinha.png"
+                  alt="Primeira imagem"></a>
+            </div>
+            <div class="descricao_prod">
+              <p>MARVEL</p>
+              <p><strong>POP! - THE FLASH</strong></p>
+              <div class="conversao_produtos" style="display: inline-flex;">
+                <p class="valor_real_produtos"></p>
+                <small class="valor_dolar_produtos">U$16.37</small>
+              </div>
+            </div>
+
+            <div class="div_btnCompra">
+              <a href="pagina_produto.html" class="btn_verMais"><button>Saber Mais <img class="seta_btnProduto"
+                    src="imagens/seta_direita.png" alt=""></button></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 div_prod">
+          <div class="borda_unica">
+            <div class="row linha_icons_prod">
+              <button class="btn_icon_produto"><img src="imagens/carrinho_de_compras.png" class="icons_prod" alt=""
+                  onclick="alerta_produtoNoCarrinho()"></button>
+              <button class="btn_icon_produto trocar_imagem"><img src="imagens/favorito.png"
+                  class="icons_prod img_favoritar" alt=""></button>
+            </div>
+            <div class="container_img">
+              <a href="pagina_produto.html"><img class="img_produto" src="imagens/tiana.png" alt="Primeira imagem"></a>
+              <a href="pagina_produto.html"><img class="img_produtoHover" src="imagens/Pop! Tiana, , hi-res.png"
+                  alt="Primeira imagem"></a>
+            </div>
+            <div class="descricao_prod">
+              <p>DISNEY</p>
+              <p><strong>POP! - TIANA</strong></p>
+              <div class="conversao_produtos" style="display: inline-flex;">
+                <p class="valor_real_produtos"></p>
+                <small class="valor_dolar_produtos">U$19.90</small>
+              </div>
+            </div>
+
+            <div class="div_btnCompra">
+              <a href="pagina_produto.html" class="btn_verMais"><button>Saber Mais <img class="seta_btnProduto"
+                    src="imagens/seta_direita.png" alt=""></button></a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-3 div_prod">
+          <div class="borda_unica">
+            <div class="row linha_icons_prod">
+              <button class="btn_icon_produto"><img src="imagens/carrinho_de_compras.png" class="icons_prod" alt=""
+                  onclick="alerta_produtoNoCarrinho()"></button>
+              <button class="btn_icon_produto trocar_imagem"><img src="imagens/favorito.png"
+                  class="icons_prod img_favoritar" alt=""></button>
+            </div>
+            <div class="container_img">
+              <a href="pagina_produto.html"><img class="img_produto" src="imagens/CARD/escarlate.png"
+                  alt="Primeira imagem"></a>
+              <a href="pagina_produto.html"><img class="img_produtoHover" src="imagens/CARD/caixinha.png"
+                  alt="Primeira imagem"></a>
+            </div>
+            <div class="descricao_prod">
+              <p>MARVEL</p>
+              <p><strong>POP! - WITCH ESCARLATE</strong></p>
+              <div class="conversao_produtos" style="display: inline-flex;">
+                <p class="valor_real_produtos"></p>
+                <small class="valor_dolar_produtos">U$18.95</small>
+              </div>
+            </div>
+
+            <div class="div_btnCompra">
+              <a href="pagina_produto.html" class="btn_verMais"><button>Saber Mais <img class="seta_btnProduto"
+                    src="imagens/seta_direita.png" alt=""></button></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 div_prod">
+          <div class="borda_unica">
+            <div class="row linha_icons_prod">
+              <button class="btn_icon_produto"><img src="imagens/carrinho_de_compras.png" class="icons_prod" alt=""
+                  onclick="alerta_produtoNoCarrinho()"></button>
+              <button class="btn_icon_produto trocar_imagem"><img src="imagens/favorito.png"
+                  class="icons_prod img_favoritar" alt=""></button>
+            </div>
+            <div class="container_img">
+              <a href="pagina_produto.html"><img class="img_produto" src="imagens/heman.png" alt="Primeira imagem"></a>
+              <a href="pagina_produto.html"><img class="img_produtoHover" src="imagens/heman_caixa.png"
+                  alt="Primeira imagem"></a>
+            </div>
+            <div class="descricao_prod">
+              <p>DESENHO</p>
+              <p><strong>POP! - HE-MAN</strong></p>
+              <div class="conversao_produtos" style="display: inline-flex;">
+                <p class="valor_real_produtos"></p>
+                <small class="valor_dolar_produtos">U$9.80</small>
+              </div>
+            </div>
+
+            <div class="div_btnCompra">
+              <a href="pagina_produto.html" class="btn_verMais"><button>Saber Mais <img class="seta_btnProduto"
+                    src="imagens/seta_direita.png" alt=""></button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <div class="row linhas_produto">
+        <div class="col-md-3 div_prod">
+          <div class="borda_unica">
+            <div class="row linha_icons_prod">
+              <button class="btn_icon_produto"><img src="imagens/carrinho_de_compras.png" class="icons_prod" alt=""
+                  onclick="alerta_produtoNoCarrinho()"></button>
+              <button class="btn_icon_produto trocar_imagem"><img src="imagens/favorito.png"
+                  class="icons_prod img_favoritar" alt=""></button>
+            </div>
+            <div class="container_img">
+              <a href="pagina_produto.html"><img class="img_produto" src="imagens/freddy_funko.png"
+                  alt="Primeira imagem"></a>
+              <a href="pagina_produto.html"><img class="img_produtoHover" src="imagens/freddy_caixinha.png"
+                  alt="Primeira imagem"></a>
+            </div>
+            <div class="descricao_prod">
+              <p>FIVE NIGHTS AT FREDDY'S</p>
+              <p><strong>POP! - FREDDY'S</strong></p>
+              <div class="conversao_produtos" style="display: inline-flex;">
+                <p class="valor_real_produtos"></p>
+                <small class="valor_dolar_produtos">U$13.60</small>
+              </div>
+            </div>
+
+            <div class="div_btnCompra">
+              <a href="pagina_produto.html" class="btn_verMais"><button>Saber Mais <img class="seta_btnProduto"
+                    src="imagens/seta_direita.png" alt=""></button></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 div_prod">
+          <div class="borda_unica">
+            <div class="row linha_icons_prod">
+              <button class="btn_icon_produto"><img src="imagens/carrinho_de_compras.png" class="icons_prod" alt=""
+                  onclick="alerta_produtoNoCarrinho()"></button>
+              <button class="btn_icon_produto trocar_imagem"><img src="imagens/favorito.png"
+                  class="icons_prod img_favoritar" alt=""></button>
+            </div>
+            <div class="container_img">
+              <a href="pagina_produto.html"><img class="img_produto" src="imagens/cocaSanta_funko.png"
+                  alt="Primeira imagem"></a>
+              <a href="pagina_produto.html"><img class="img_produtoHover" src="imagens/cocaSanta_caixinha.png"
+                  alt="Primeira imagem"></a>
+            </div>
+            <div class="descricao_prod">
+              <p>NATAL</p>
+              <p><strong>POP! - COCA-COLA SANTA</strong></p>
+              <div class="conversao_produtos" style="display: inline-flex;">
+                <p class="valor_real_produtos"></p>
+                <small class="valor_dolar_produtos">U$18.95</small>
+              </div>
+            </div>
+
+            <div class="div_btnCompra">
+              <a href="pagina_produto.html" class="btn_verMais"><button>Saber Mais <img class="seta_btnProduto"
+                    src="imagens/seta_direita.png" alt=""></button></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 div_prod">
+          <div class="borda_unica">
+            <div class="row linha_icons_prod">
+              <button class="btn_icon_produto"><img src="imagens/carrinho_de_compras.png" class="icons_prod" alt=""
+                  onclick="alerta_produtoNoCarrinho()"></button>
+              <button class="btn_icon_produto trocar_imagem"><img src="imagens/favorito.png"
+                  class="icons_prod img_favoritar" alt=""></button>
+            </div>
+            <div class="container_img">
+              <a href="pagina_produto.html"><img class="img_produto" src="imagens/eevee_funko.png"
+                  alt="Primeira imagem"></a>
+              <a href="pagina_produto.html"><img class="img_produtoHover" src="imagens/eevee_caixinha.png"
+                  alt="Primeira imagem"></a>
+            </div>
+            <div class="descricao_prod">
+              <p>POKÉMON</p>
+              <p><strong>POP! - EEVEE</strong></p>
+              <div class="conversao_produtos" style="display: inline-flex;">
+                <p class="valor_real_produtos"></p>
+                <small class="valor_dolar_produtos">U$16.50</small>
+              </div>
+            </div>
+
+            <div class="div_btnCompra">
+              <a href="pagina_produto.html" class="btn_verMais"><button>Saber Mais <img class="seta_btnProduto"
+                    src="imagens/seta_direita.png" alt=""></button></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 div_prod">
+          <div class="borda_unica">
+            <div class="row linha_icons_prod">
+              <button class="btn_icon_produto"><img src="imagens/carrinho_de_compras.png" class="icons_prod" alt=""
+                  onclick="alerta_produtoNoCarrinho()"></button>
+              <button class="btn_icon_produto trocar_imagem"><img src="imagens/favorito.png"
+                  class="icons_prod img_favoritar" alt=""></button>
+            </div>
+            <div class="container_img">
+              <a href="pagina_produto.html"><img class="img_produto" src="imagens/pantera_funko.png"
+                  alt="Primeira imagem"></a>
+              <a href="pagina_produto.html"><img class="img_produtoHover" src="imagens/pantera_caixinha.png"
+                  alt="Primeira imagem"></a>
+            </div>
+            <div class="descricao_prod">
+              <p>MARVEL</p>
+              <p><strong>POP! - PANTERA NEGRA</strong></p>
+              <div class="conversao_produtos" style="display: inline-flex;">
+                <p class="valor_real_produtos"></p>
+                <small class="valor_dolar_produtos">U$22.90</small>
+              </div>
+            </div>
+
+            <div class="div_btnCompra">
+              <a href="pagina_produto.html" class="btn_verMais"><button>Saber Mais <img class="seta_btnProduto"
+                    src="imagens/seta_direita.png" alt=""></button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="row linhas_produto">
+        <div class="col-md-3 div_prod">
+          <div class="borda_unica">
+            <div class="row linha_icons_prod">
+              <button class="btn_icon_produto"><img src="imagens/carrinho_de_compras.png" class="icons_prod" alt=""
+                  onclick="alerta_produtoNoCarrinho()"></button>
+              <button class="btn_icon_produto trocar_imagem"><img src="imagens/favorito.png"
+                  class="icons_prod img_favoritar" alt=""></button>
+            </div>
+            <div class="container_img">
+              <a href="pagina_produto.html"><img class="img_produto" src="imagens/funkos/neytiri_funko.png"
+                  alt="Primeira imagem"></a>
+              <a href="pagina_produto.html"><img class="img_produtoHover" src="imagens/funkos/neytiri_caixinha.png"
+                  alt="Primeira imagem"></a>
+            </div>
+            <div class="descricao_prod">
+              <p>AVATAR</p>
+              <p><strong>POP! - NEYTIRI</strong></p>
+              <div class="conversao_produtos" style="display: inline-flex;">
+                <p class="valor_real_produtos"></p>
+                <small class="valor_dolar_produtos">U$24.99</small>
+              </div>
+            </div>
+
+            <div class="div_btnCompra">
+              <a href="pagina_produto.html" class="btn_verMais"><button>Saber Mais <img class="seta_btnProduto"
+                    src="imagens/seta_direita.png" alt=""></button></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 div_prod">
+          <div class="borda_unica">
+            <div class="row linha_icons_prod">
+              <button class="btn_icon_produto"><img src="imagens/carrinho_de_compras.png" class="icons_prod" alt=""
+                  onclick="alerta_produtoNoCarrinho()"></button>
+              <button class="btn_icon_produto trocar_imagem"><img src="imagens/favorito.png"
+                  class="icons_prod img_favoritar" alt=""></button>
+            </div>
+            <div class="container_img">
+              <a href="pagina_produto.html"><img class="img_produto" src="imagens/funkos/smeagol_funko.png"
+                  alt="Primeira imagem"></a>
+              <a href="pagina_produto.html"><img class="img_produtoHover" src="imagens/funkos/smeagol_caixinha.png"
+                  alt="Primeira imagem"></a>
+            </div>
+            <div class="descricao_prod">
+              <p>SENHOR DOS ANÉIS</p>
+              <p><strong>POP! - SMEAGOL</strong></p>
+              <div class="conversao_produtos" style="display: inline-flex;">
+                <p class="valor_real_produtos"></p>
+                <small class="valor_dolar_produtos">U$14.78</small>
+              </div>
+            </div>
+
+            <div class="div_btnCompra">
+              <a href="pagina_produto.html" class="btn_verMais"><button>Saber Mais <img class="seta_btnProduto"
+                    src="imagens/seta_direita.png" alt=""></button></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 div_prod">
+          <div class="borda_unica">
+            <div class="row linha_icons_prod">
+              <button class="btn_icon_produto"><img src="imagens/carrinho_de_compras.png" class="icons_prod" alt=""
+                  onclick="alerta_produtoNoCarrinho()"></button>
+              <button class="btn_icon_produto trocar_imagem"><img src="imagens/favorito.png"
+                  class="icons_prod img_favoritar" alt=""></button>
+            </div>
+            <div class="container_img">
+              <a href="pagina_produto.html"><img class="img_produto" src="imagens/funkos/hercules_funko.png"
+                  alt="Primeira imagem"></a>
+              <a href="pagina_produto.html"><img class="img_produtoHover" src="imagens/funkos/hercules_caixinha.png"
+                  alt="Primeira imagem"></a>
+            </div>
+            <div class="descricao_prod">
+              <p>DISNEY</p>
+              <p><strong>POP! - HÉRCULES</strong></p>
+              <div class="conversao_produtos" style="display: inline-flex;">
+                <p class="valor_real_produtos"></p>
+                <small class="valor_dolar_produtos">U$15.90</small>
+              </div>
+            </div>
+
+            <div class="div_btnCompra">
+              <a href="pagina_produto.html" class="btn_verMais"><button>Saber Mais <img class="seta_btnProduto"
+                    src="imagens/seta_direita.png" alt=""></button></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 div_prod">
+          <div class="borda_unica">
+            <div class="row linha_icons_prod">
+              <button class="btn_icon_produto"><img src="imagens/carrinho_de_compras.png" class="icons_prod" alt=""
+                  onclick="alerta_produtoNoCarrinho()"></button>
+              <button class="btn_icon_produto trocar_imagem"><img src="imagens/favorito.png"
+                  class="icons_prod img_favoritar" alt=""></button>
+            </div>
+            <div class="container_img">
+              <a href="pagina_produto.html"><img class="img_produto" src="imagens/funkos/princesaleia_funko.png"
+                  alt="Primeira imagem"></a>
+              <a href="pagina_produto.html"><img class="img_produtoHover" src="imagens/funkos/princesaleia_caixinha.png"
+                  alt="Primeira imagem"></a>
+            </div>
+            <div class="descricao_prod">
+              <p>MARVEL</p>
+              <p><strong>POP! - LOKI MARVEL</strong></p>
+              <div class="conversao_produtos" style="display: inline-flex;">
+                <p class="valor_real_produtos"></p>
+                <small class="valor_dolar_produtos">U$24.05</small>
+              </div>
+            </div>
+
+            <div class="div_btnCompra">
+              <a href="pagina_produto.html" class="btn_verMais"><button>Saber Mais <img class="seta_btnProduto"
+                    src="imagens/seta_direita.png" alt=""></button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+  </main>
+
+  <footer class="container-fluid footer">
+    <div class="infos_footer">
+      <div class="icones_footer">
+        <a href="/"><i class="fa-brands fa-instagram elemento_footer"></i></a>
+        <a href="/"><i class="fa-brands fa-twitter elemento_footer"></i></a>
+        <a href="/"><i class="fa-brands fa-facebook elemento_footer"></i></a>
+      </div>
+
+      <div class="texto_footer text-center">
+        <p>todos os direitos reservados a Camila e Beatriz do Senai</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    /////////////////// CONVERSÃO DE DÓLAR NA PÁGINA PRODUTOS ///////////////////////
+    const valores_reais = document.querySelectorAll('.valor_real_produtos')
+    const valores_dolar = document.querySelectorAll('.valor_dolar_produtos');
+
+
+    function valor() {
+      fetch(`https://economia.awesomeapi.com.br/json/last/USD-BRL`)
+        .then((response) => {
+          return response.json();
+        })
+        .then((economia) => {
+          console.log(economia);
+          dolar_api = parseFloat(economia.USDBRL.bid);
+          console.log(typeof dolar_api)
+
+          console.log('olá');
+          for (let x = 0; x < valores_dolar.length; x++) {
+            console.log('Valor do dólar: ' + valores_dolar[x].textContent)
+            var extraido = valores_dolar[x].textContent;
+            console.log('Valor do produto em dólar, extraindo apenas o text content: ' + extraido)
+
+            var novo = parseFloat(extraido.substring(2));
+            console.log('Valor do produto em dólar, com duas casas após a vírgula: ' + novo)
+
+            var outro = novo * dolar_api;
+            outro = outro.toFixed(2);
+            console.log('Valor multiplicado pelo dólar: ' + outro)
+
+            valores_reais[x].innerHTML = `R$${outro}`
+          }
+        })
+    }
+
+
+    const btns_curtirIcon = document.querySelectorAll('.trocar_imagem');
+    for (let i = 0; i < btns_curtirIcon.length; i++) {
+      btns_curtirIcon[i].addEventListener('click', mudarImagem);
+    }
+
+    function mudarImagem(event) {
+      const btn = event.currentTarget;
+      const img = btn.parentNode.querySelector('.img_favoritar');
+
+      if (img.src.includes('imagens/favorito.png')) {
+        img.src = 'imagens/favorito-_1_.svg';
+      } else {
+        img.src = 'imagens/favorito.png';
+        for (let i = 0; i < btns_curtirIcon.length; i++) {
+          btns_curtirIcon[i].style.height = '100%';
+        }
+        img.style.height = '100%';
+      }
+      btn.style.height = '100%';
+    }
+
+  </script>
+
+  <script src="javascript/script.js"></script>
+</body>
+
+</html>
